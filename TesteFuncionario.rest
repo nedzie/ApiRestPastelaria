@@ -1,8 +1,7 @@
 ### Verbo GET - Listar
-GET http://localhost:5000/funcionario/0 HTTP/1.1
-
+GET http://localhost:8000/funcionario/0 HTTP/1.1
 ### Verbo POST - Adicionar
-POST http://localhost:5000/funcionario/4 HTTP/1.1
+POST http://localhost:8000/funcionario/4 HTTP/1.1
 content-type: application/json
 
 {
@@ -13,9 +12,8 @@ content-type: application/json
   "matricula": "12345",
   "grupo": 1
 }
-
 ### Verbo PUT - Atualiza
-PUT http://localhost:5000/funcionario/2 HTTP/1.1
+PUT http://localhost:8000/funcionario/2 HTTP/1.1
 content-type: application/json
 
 {
@@ -26,6 +24,5 @@ content-type: application/json
   "matricula": "54321",
   "grupo": 2
 }
-
 ### Verbo DELETE - Excluir
-DELETE http://localhost:5000/funcionario/3 HTTP/1.1
+DELETE http://localhost:8000/funcionario/3 HTTP/1.1
