@@ -1,0 +1,30 @@
+### Verbo POST - Adicionar
+POST http://localhost:8000/funcionario/ HTTP/1.1
+content-type: application/json
+
+{
+  "nome": "Bolinhas dos Testes",
+  "cpf": "12345678909",
+  "telefone": "49898989",
+  "senha": "abc",
+  "matricula": "54321",
+  "grupo": 2
+}
+
+### Verbo GET - Listar
+GET http://localhost:8000/funcionario/ HTTP/1.1
+
+### Verbo PUT - Atualiza
+PUT http://localhost:8000/funcionario/1 HTTP/1.1
+content-type: application/json
+
+{
+  "nome": "Editada",
+  "cpf": "00000000000",
+  "telefone": "0000000",
+  "senha": "123",
+  "matricula": "00156",
+  "grupo": 2
+}
+### Verbo DELETE - Excluir
+DELETE http://localhost:8000/funcionario/1 HTTP/1.1

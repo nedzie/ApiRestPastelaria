@@ -1,8 +1,5 @@
-#
-GET http://localhost:8000/produto/0 HTTP/1.1
-
 ###
-POST http://localhost:8000/produto/4 HTTP/1.1
+POST http://localhost:8000/produto/ HTTP/1.1
 content-type: application/json
 
 {
@@ -13,7 +10,10 @@ content-type: application/json
 }
 
 ###
-PUT http://localhost:8000/produto/2 HTTP/1.1
+GET http://localhost:8000/produto/ HTTP/1.1
+
+###
+PUT http://localhost:8000/produto/1 HTTP/1.1
 content-type: application/json
 
 {
@@ -23,4 +23,5 @@ content-type: application/json
   "valor_unitario": 7.50
 }
 
-DELETE http://localhost:8000/produto/3 HTTP/1.1
+###
+DELETE http://localhost:8000/produto/1 HTTP/1.1
