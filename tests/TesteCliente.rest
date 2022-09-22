@@ -1,5 +1,7 @@
 ### Verbo POST - Adicionar
 POST http://localhost:8000/cliente/ HTTP/1.1
+x-token: abcBolinhasToken
+x-key: abcBolinhasKey
 content-type: application/json
 
 {
@@ -13,10 +15,13 @@ content-type: application/json
 
 ### Verbo GET - Listar
 GET http://localhost:8000/cliente/ HTTP/1.1
-
+x-token: abcBolinhasToken
+x-key: abcBolinhasKey
 
 ### Verbo PUT - Atualiza
 PUT http://localhost:8000/cliente/1 HTTP/1.1
+x-token: abcBolinhasToken
+x-key: abcBolinhasKey
 content-type: application/json
 
 {
@@ -30,3 +35,5 @@ content-type: application/json
 
 ### Verbo DELETE - Excluir
 DELETE http://localhost:8000/cliente/1 HTTP/1.1
+x-token: abcBolinhasToken
+x-key: abcBolinhasKey
