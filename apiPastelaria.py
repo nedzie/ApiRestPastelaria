@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI, Depends
 
 # imports de rota
 from mod_funcionario import FuncionarioDAO
@@ -11,8 +11,10 @@ from mod_cliente.ClienteModel import ClienteDB
 from mod_produto.ProdutoModel import ProdutoDB
 
 import db
+import security
 
-app = FastAPI()
+app = FastAPI(dependencies=[Depends(
+    security.verify_token), Depends(security.verify_key)])
 
 app.include_router(FuncionarioDAO.router)
 app.include_router(ClienteDAO.router)
