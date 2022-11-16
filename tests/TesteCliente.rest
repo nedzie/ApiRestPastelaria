@@ -6,10 +6,10 @@ content-type: application/json
 
 {
   "nome": "Cliente",
-  "cpf": "12345678910",
+  "cpf": "00099988877",
   "telefone": "49988234567",
   "compra_fiado": 1,
-  "dia_fiado": 16,
+  "dia_fiado": 25,
   "senha": "abcbolinhas"
 }
 

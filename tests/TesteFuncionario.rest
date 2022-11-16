@@ -6,7 +6,7 @@ content-type: application/json
 
 {
   "nome": "Bolinhas dos Testes",
-  "cpf": "12345678909",
+  "cpf": "77788844431",
   "telefone": "49898989",
   "senha": "abc",
   "matricula": "54321",

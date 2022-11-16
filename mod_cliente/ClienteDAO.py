@@ -49,16 +49,19 @@ def get_cliente_id(id: int):
 def post_cliente(corpo: Cliente):
     try:
         session = db.Session()
+
         dados = ClienteDB(None, corpo.nome, corpo.cpf, corpo.telefone,
                           corpo.compra_fiado, corpo.dia_fiado, corpo.senha)
-        session.add(dados)
 
+        session.add(dados)
         session.commit()
 
         return {"msg": "Cadastrado com sucesso", "id": dados.id_cliente}, 200
+
     except Exception as e:
         session.rollback()
         return {"msg": "Erro ao cadastrar", "erro": str(e)}, 406
+
     finally:
         session.close()
 
