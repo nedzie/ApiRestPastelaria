@@ -39,6 +39,25 @@ def get_funcionario():
         session.close()
 
 
+@router.post("/teste/", tags=["teste"])
+def validar_login(cpf: str, senha: str):
+    print(cpf, senha)
+    session = db.Session()
+
+    ehValido: bool = False
+
+    x = session.query(FuncionarioDB).filter(
+        (FuncionarioDB.cpf == cpf)).filter(FuncionarioDB.senha == senha).first()
+
+    if x is not None:
+        ehValido = True
+
+    if ehValido:
+        return 1, x, 200
+    else:
+        return 0, 200
+
+
 # selecionarPorId()
 @router.get("/funcionario/{id}", tags=["funcionario"])
 def get_funcionario_id(id: int):

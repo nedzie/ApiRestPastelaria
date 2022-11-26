@@ -1,5 +1,3 @@
-from dis import findlinestarts
-from typing import final
 from fastapi import APIRouter
 from pydantic import BaseModel
 
@@ -51,6 +49,8 @@ def post_produto(corpo: Produto):
                           corpo.foto, corpo.valor_unitario)
 
         session.add(dados)
+
+        session.query()
         session.commit()
 
         return {"msg": "Cadastrado com sucesso", "id": dados.id_produto}, 200
